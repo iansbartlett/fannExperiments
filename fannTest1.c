@@ -1,10 +1,17 @@
 //FANN code copied from the FANN quickstart guide- just getting familar with the FANN neural network interface
 //Ian Bartlett 4/3/2014 
 
+//Notes: 
+//Sets up a general-purpose artifical neural network. Inputs, outputs,
+//and hidden layers can all be configured in the constants. 
+//More than 3 hidden layers will lead to fitting issues and accuracy 
+//degradation unless care is taken.
+
 #include <stdlib.h>
 //#include "fann.h"
-#include "doublefann.h"
-
+//#include "doublefann.h"
+#include "doublefann.c"
+#include <math.h>
 int main()
 {
     const unsigned int num_input = 2;
